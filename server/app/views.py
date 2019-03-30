@@ -7,4 +7,4 @@ values = [10,9,8,7,6,4,7,8]
 
 @app.route('/')
 def index():
-    return render_template('index.html', labels=time, values=values)
+    return render_template('chart.html', labels=time, values=values)

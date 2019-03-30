@@ -1,59 +1,104 @@
-{%extends"layout.html"%}
+{%extends"index.html"%}
 {%block content%}
 
 <meta charset="utf-8">
  
 <!-- import plugin script -->
-<script src="static/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 <h1>Flask Chart.js</h1>
 <!-- bar chart canvas element -->
+
+<canvas id="myChart" width="400" height="400"></canvas>
+<script>
+var ctx = document.getElementById('myChart');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [{% for item in labels %}
+                  "{{item}}",
+              {% endfor %}],
+        datasets: [{
+            label: '# of Votes',
+            data: [{% for item in values %}
+                      {{item}},
+                    {% endfor %}],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>
+
 <canvas id="chart" width="600" height="400"></canvas>
  
-<script></p>
-<p>   // bar chart data<br />
-   var barData = {<br />
-   labels : [{% for item in labels %}<br />
-                  "{{item}}",<br />
-              {% endfor %}],<br />
-   datasets : [<br />
-      {<br />
-            fillColor: "rgba(151,187,205,0.2)",<br />
-            strokeColor: "rgba(151,187,205,1)",<br />
-            pointColor: "rgba(151,187,205,1)",<br />
-            pointStrokeColor: "#fff",<br />
-            pointHighlightFill: "#fff",<br />
-            pointHighlightStroke: "rgba(151,187,205,1)",<br />
-            bezierCurve : false,<br />
-            data : [{% for item in values %}<br />
-                      {{item}},<br />
-                    {% endfor %}]<br />
-      }]<br />
-   }</p>
-<p>    Chart.defaults.global.animationSteps = 50;<br />
-    Chart.defaults.global.tooltipYPadding = 16;<br />
-    Chart.defaults.global.tooltipCornerRadius = 0;<br />
-    Chart.defaults.global.tooltipTitleFontStyle = "normal";<br />
-    Chart.defaults.global.tooltipFillColor = "rgba(0,0,0,0.8)";<br />
-    Chart.defaults.global.animationEasing = "easeOutBounce";<br />
-    Chart.defaults.global.responsive = false;<br />
-    Chart.defaults.global.scaleLineColor = "black";<br />
-    Chart.defaults.global.scaleFontSize = 16;</p>
-<p>   // get bar chart canvas<br />
-   var mychart = document.getElementById("chart").getContext("2d");</p>
-<p>   steps = 10<br />
-   max = 10<br />
+<script>
+   var barData = {
+   labels : [{% for item in labels %}
+                  "{{item}}",
+              {% endfor %}],
+   datasets : [
+      {
+            fillColor: "rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            bezierCurve : false,
+            data : [{% for item in values %}
+                      {{item}},
+                    {% endfor %}]
+      }]
+   };
+    Chart.defaults.global.animationSteps = 50;
+    Chart.defaults.global.tooltipYPadding = 16;
+    Chart.defaults.global.tooltipCornerRadius = 0;
+    Chart.defaults.global.tooltipTitleFontStyle = "normal";
+    Chart.defaults.global.tooltipFillColor = "rgba(0,0,0,0.8)";
+    Chart.defaults.global.animationEasing = "easeOutBounce";
+    Chart.defaults.global.responsive = false;
+    Chart.defaults.global.scaleLineColor = "black";
+    Chart.defaults.global.scaleFontSize = 16;
+   // get bar chart canvas<br />
+   var mychart = document.getElementById("chart").getContext("2d");
+	  steps = 10;
+   max = 10;
    // draw bar chart<br />
-   var LineChartDemo = new Chart(mychart).Line(barData, {<br />
-        scaleOverride: true,<br />
-        scaleSteps: steps,<br />
-        scaleStepWidth: Math.ceil(max / steps),<br />
-        scaleStartValue: 0,<br />
-        scaleShowVerticalLines: true,<br />
-        scaleShowGridLines : true,<br />
-        barShowStroke : true,<br />
-        scaleShowLabels: true,<br />
-        bezierCurve: false,</p>
-<p>   });</p>
-<p></script>
+   var LineChartDemo = new Chart(mychart).Line(barData, {
+        scaleOverride: true,
+        scaleSteps: steps,
+        scaleStepWidth: Math.ceil(max / steps),
+        scaleStartValue: 0,
+        scaleShowVerticalLines: true,
+        scaleShowGridLines : true,
+        barShowStroke : true,
+        scaleShowLabels: true,
+        bezierCurve: false,
+ });
+</script>
 
 {%endblock%}
