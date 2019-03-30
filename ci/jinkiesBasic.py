@@ -9,10 +9,10 @@ import tensorflow
 import PIL
 import keras.backend as K
 
-def auc(y_true, y_pred):
-    auc = tensorflow.metrics.auc(y_true, y_pred)[1]
-    K.get_session().run(tensorflow.local_variables_initializer())
-    return auc
+#def auc(y_true, y_pred):
+#    auc = tensorflow.metrics.auc(y_true, y_pred)[1]
+#    K.get_session().run(tensorflow.local_variables_initializer())
+#    return auc
 
 def f1(y_true, y_pred):
     def recall(y_true, y_pred):
@@ -130,13 +130,13 @@ def fmeasure(y_true, y_pred):
 
 class TestLangClass:
     def __init__(self):
-        self.hyperparameter = {}
+        self.HYPERPARAMETER = {}
     
 TestLang = TestLangClass()
 
 def hyperparameter(value, name):
     global TestLang
-    TestLang.hyperparameter[name] = value
+    TestLang.HYPERPARAMETER[name] = value
     return value
 
 def predict_func(func):
@@ -161,3 +161,4 @@ def predict_func(func):
         print("NO_OF_CORRECT_PREDICTIONS", TestLang.NO_OF_CORRECT_PREDICTIONS)
         print("NO_OF_WRONG_PREDICTIONS", TestLang.NO_OF_WRONG_PREDICTIONS)
     return wrapper
+
