@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-cyan.min.css" /> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 </head>
 <body>
@@ -13,379 +13,541 @@
   <header class="mdl-layout__header" style="background-color: #3d5c5c">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">Title</span>
+      <span class="mdl-layout-title">Jinkies</span>
     </div>
     <!-- Tabs -->
     <div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="background-color:#293d3d">
-      <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Tab 1</a>
-      <a href="#fixed-tab-2" class="mdl-layout__tab">Tab 2</a>
-      <a href="#fixed-tab-3" class="mdl-layout__tab">Tab 3</a>
+      <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Output</a>
+      <a href="#fixed-tab-2" class="mdl-layout__tab">Hyperparameters</a>
+			<a href="#fixed-tab-3" class="mdl-layout__tab">Metrics</a>
+			<a href="#fixed-tab-4" class="mdl-layout__tab">Installed Packages</a>
+			<a href="#fixed-tab-5" class="mdl-layout__tab">Dataset Used</a>
+			<a href="#fixed-tab-6" class="mdl-layout__tab">Code</a>
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
+    <span class="mdl-layout-title">Jinkies</span>
   </div>
   <main class="mdl-layout__content">
     <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
-      <div class="page-content"><!-- Your content goes here -->THIS IS TAB 1</div>
+			<div class="page-content"><!-- Your content goes here -->
+			<div style="margin: 70px; padding: 10px; border: 1px solid black; color:rgb(13, 12, 15); background-color: rgb(243, 243, 243); font-family: 'Courier New', Courier, monospace">
+					<br>Started by user Anubhav Patel
+					<br>Running as SYSTEM
+					<br>Building in workspace /var/lib/jenkins/workspace/HINT
+					<br>using credential a12e7b9d-dc86-4f54-b781-25828950febe
+					<br> &gt; git rev-parse --is-inside-work-tree # timeout=10
+					<br>Fetching changes from the remote Git repository
+					<br> &gt; git config remote.origin.url https://github.com/anubhavp28/dog-vs-cat-classifier # timeout=10
+					<br>Fetching upstream changes from https://github.com/anubhavp28/dog-vs-cat-classifier
+					<br> &gt; git --version # timeout=10
+					<br>using GIT_ASKPASS to set credentials 
+					<br> &gt; git fetch --tags --force --progress https://github.com/anubhavp28/dog-vs-cat-classifier +refs/heads/*:refs/remotes/origin/*
+					<br> &gt; git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+					<br> &gt; git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+					<br>Checking out Revision 0196248487da3e012c6a8f57c6bd6c251a526233 (refs/remotes/origin/master)
+					<br> &gt; git config core.sparsecheckout # timeout=10
+					<br> &gt; git checkout -f 0196248487da3e012c6a8f57c6bd6c251a526233
+					<br>Commit message: "Rename requirmenets.txt to  requirements.txt"
+					<br> &gt; git rev-list --no-walk ed2e89b92237257b4cfcef2acb746822d77b1dfe # timeout=10
+					<br>[HINT] $ /bin/sh -xe /tmp/jenkins3206281155504370959.sh
+					<br>+ python -m venv venv
+					<br>+ source venv/bin/activate
+					<br>++ deactivate nondestructive
+					<br>++ '[' -n '' ']'
+					<br>++ '[' -n '' ']'
+					<br>++ '[' -n /bin/sh -o -n '' ']'
+					<br>++ hash -r
+					<br>++ '[' -n '' ']'
+					<br>++ unset VIRTUAL_ENV
+					<br>++ '[' '!' nondestructive = nondestructive ']'
+					<br>++ VIRTUAL_ENV=/var/lib/jenkins/workspace/HINT/venv
+					<br>++ export VIRTUAL_ENV
+					<br>++ _OLD_VIRTUAL_PATH=/usr/local/sbin:/usr/local/bin:/usr/bin
+					<br>++ PATH=/var/lib/jenkins/workspace/HINT/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/bin
+					<br>++ export PATH
+					<br>++ '[' -n '' ']'
+					<br>++ '[' -z '' ']'
+					<br>++ _OLD_VIRTUAL_PS1=
+					<br>++ '[' 'x(venv) ' '!=' x ']'
+					<br>++ PS1='(venv) '
+					<br>++ export PS1
+					<br>++ '[' -n /bin/sh -o -n '' ']'
+					<br>++ hash -r
+					<br>+ pip install -r requirements.txt
+					<br>Collecting absl-py==0.7.1 (from -r requirements.txt (line 1))
+					<br>	Downloading https://files.pythonhosted.org/packages/da/3f/9b0355080b81b15ba6a9ffcf1f5ea39e307a2778b2f2dc8694724e8abd5b/absl-py-0.7.1.tar.gz (99kB)
+					<br>Collecting astor==0.7.1 (from -r requirements.txt (line 2))
+					<br>	Downloading https://files.pythonhosted.org/packages/35/6b/11530768cac581a12952a2aad00e1526b89d242d0b9f59534ef6e6a1752f/astor-0.7.1-py2.py3-none-any.whl
+					<br>Collecting cycler==0.10.0 (from -r requirements.txt (line 3))
+					<br>	Downloading https://files.pythonhosted.org/packages/f7/d2/e07d3ebb2bd7af696440ce7e754c59dd546ffe1bbe732c8ab68b9c834e61/cycler-0.10.0-py2.py3-none-any.whl
+					<br>Collecting gast==0.2.2 (from -r requirements.txt (line 4))
+					<br>	Downloading https://files.pythonhosted.org/packages/4e/35/11749bf99b2d4e3cceb4d55ca22590b0d7c2c62b9de38ac4a4a7f4687421/gast-0.2.2.tar.gz
+					<br>Collecting grpcio==1.19.0 (from -r requirements.txt (line 5))
+					<br>	Downloading https://files.pythonhosted.org/packages/83/60/b58313c04365bd2b3c63d077bedb9c28723b9b22b399d3e89c96a16bc5bc/grpcio-1.19.0-cp37-cp37m-manylinux1_x86_64.whl (10.8MB)
+					<br>Collecting h5py==2.9.0 (from -r requirements.txt (line 6))
+					<br>	Downloading https://files.pythonhosted.org/packages/8e/fd/2ca5c4f4ed33ac4178f9c4d551e3946ab480866e3cd67a65a67a4bb35367/h5py-2.9.0-cp37-cp37m-manylinux1_x86_64.whl (2.8MB)
+					<br>Collecting Keras==2.2.4 (from -r requirements.txt (line 7))
+					<br>	Downloading https://files.pythonhosted.org/packages/5e/10/aa32dad071ce52b5502266b5c659451cfd6ffcbf14e6c8c4f16c0ff5aaab/Keras-2.2.4-py2.py3-none-any.whl (312kB)
+					<br>Collecting Keras-Applications==1.0.7 (from -r requirements.txt (line 8))
+					<br>	Downloading https://files.pythonhosted.org/packages/90/85/64c82949765cfb246bbdaf5aca2d55f400f792655927a017710a78445def/Keras_Applications-1.0.7-py2.py3-none-any.whl (51kB)
+					<br>Collecting Keras-Preprocessing==1.0.9 (from -r requirements.txt (line 9))
+					<br>	Downloading https://files.pythonhosted.org/packages/c0/bf/0315ef6a9fd3fc2346e85b0ff1f5f83ca17073f2c31ac719ab2e4da0d4a3/Keras_Preprocessing-1.0.9-py2.py3-none-any.whl (59kB)
+					<br>Collecting kiwisolver==1.0.1 (from -r requirements.txt (line 10))
+					<br>	Downloading https://files.pythonhosted.org/packages/5c/7e/d6cae2f241ba474a2665f24b480bf4e247036d63939dda2bbc4d2ee5069d/kiwisolver-1.0.1-cp37-cp37m-manylinux1_x86_64.whl (89kB)
+					<br>Collecting Markdown==3.1 (from -r requirements.txt (line 11))
+					<br>	Downloading https://files.pythonhosted.org/packages/f5/e4/d8c18f2555add57ff21bf25af36d827145896a07607486cc79a2aea641af/Markdown-3.1-py2.py3-none-any.whl (87kB)
+					<br>Collecting matplotlib==3.0.3 (from -r requirements.txt (line 12))
+					<br>	Downloading https://files.pythonhosted.org/packages/83/2a/e47bbd9396af32376863a426baed62d9bf3091f81defd1fe81c5f33b11a3/matplotlib-3.0.3-cp37-cp37m-manylinux1_x86_64.whl (13.0MB)
+					<br>Collecting mock==2.0.0 (from -r requirements.txt (line 13))
+					<br>	Downloading https://files.pythonhosted.org/packages/e6/35/f187bdf23be87092bd0f1200d43d23076cee4d0dec109f195173fd3ebc79/mock-2.0.0-py2.py3-none-any.whl (56kB)
+					<br>Collecting numpy==1.16.2 (from -r requirements.txt (line 14))
+					<br>	Downloading https://files.pythonhosted.org/packages/91/e7/6c780e612d245cca62bc3ba8e263038f7c144a96a54f877f3714a0e8427e/numpy-1.16.2-cp37-cp37m-manylinux1_x86_64.whl (17.3MB)
+					<br>Collecting pandas==0.24.2 (from -r requirements.txt (line 15))
+					<br>	Downloading https://files.pythonhosted.org/packages/22/e6/2d47835f91eb010036be207581fa113fb4e3822ec1b4bafb0d3d105fede6/pandas-0.24.2-cp37-cp37m-manylinux1_x86_64.whl (10.1MB)
+					<br>Collecting pbr==5.1.3 (from -r requirements.txt (line 16))
+					<br>	Downloading https://files.pythonhosted.org/packages/14/09/12fe9a14237a6b7e0ba3a8d6fcf254bf4b10ec56a0185f73d651145e9222/pbr-5.1.3-py2.py3-none-any.whl (107kB)
+					<br>Collecting Pillow==5.4.1 (from -r requirements.txt (line 17))
+					<br>	Downloading https://files.pythonhosted.org/packages/ae/2a/0a0ab2833e5270664fb5fae590717f867ac6319b124160c09f1d3291de28/Pillow-5.4.1-cp37-cp37m-manylinux1_x86_64.whl (2.0MB)
+					<br>Collecting protobuf==3.7.0 (from -r requirements.txt (line 18))
+					<br>	Downloading https://files.pythonhosted.org/packages/95/92/0637b1b0e646348bd0e8bd2796dcb5434a21711eff54a456617fc7df3916/protobuf-3.7.0-cp37-cp37m-manylinux1_x86_64.whl (1.2MB)
+					<br>Collecting pyparsing==2.3.1 (from -r requirements.txt (line 19))
+					<br>	Downloading https://files.pythonhosted.org/packages/de/0a/001be530836743d8be6c2d85069f46fecf84ac6c18c7f5fb8125ee11d854/pyparsing-2.3.1-py2.py3-none-any.whl (61kB)
+					<br>Collecting python-dateutil==2.8.0 (from -r requirements.txt (line 20))
+					<br>	Downloading https://files.pythonhosted.org/packages/41/17/c62faccbfbd163c7f57f3844689e3a78bae1f403648a6afb1d0866d87fbb/python_dateutil-2.8.0-py2.py3-none-any.whl (226kB)
+					<br>Collecting pytz==2018.9 (from -r requirements.txt (line 21))
+					<br>	Downloading https://files.pythonhosted.org/packages/61/28/1d3920e4d1d50b19bc5d24398a7cd85cc7b9a75a490570d5a30c57622d34/pytz-2018.9-py2.py3-none-any.whl (510kB)
+					<br>Collecting PyYAML==5.1 (from -r requirements.txt (line 22))
+					<br>	Downloading https://files.pythonhosted.org/packages/9f/2c/9417b5c774792634834e730932745bc09a7d36754ca00acf1ccd1ac2594d/PyYAML-5.1.tar.gz (274kB)
+					<br>Collecting scikit-learn==0.20.3 (from -r requirements.txt (line 23))
+					<br>	Downloading https://files.pythonhosted.org/packages/aa/cc/a84e1748a2a70d0f3e081f56cefc634f3b57013b16faa6926d3a6f0598df/scikit_learn-0.20.3-cp37-cp37m-manylinux1_x86_64.whl (5.4MB)
+					<br>Collecting scipy==1.2.1 (from -r requirements.txt (line 24))
+					<br>	Downloading https://files.pythonhosted.org/packages/3e/7e/5cee36eee5b3194687232f6150a89a38f784883c612db7f4da2ab190980d/scipy-1.2.1-cp37-cp37m-manylinux1_x86_64.whl (24.8MB)
+					<br>Collecting six==1.12.0 (from -r requirements.txt (line 25))
+					<br>	Downloading https://files.pythonhosted.org/packages/73/fb/00a976f728d0d1fecfe898238ce23f502a721c0ac0ecfedb80e0d88c64e9/six-1.12.0-py2.py3-none-any.whl
+					<br>Collecting tensorboard==1.13.1 (from -r requirements.txt (line 26))
+					<br>	Downloading https://files.pythonhosted.org/packages/0f/39/bdd75b08a6fba41f098b6cb091b9e8c7a80e1b4d679a581a0ccd17b10373/tensorboard-1.13.1-py3-none-any.whl (3.2MB)
+					<br>Collecting tensorflow==1.13.1 (from -r requirements.txt (line 27))
+					<br>	Downloading https://files.pythonhosted.org/packages/d4/29/6b4f1e02417c3a1ccc85380f093556ffd0b35dc354078074c5195c8447f2/tensorflow-1.13.1-cp37-cp37m-manylinux1_x86_64.whl (92.6MB)
+					<br>Collecting tensorflow-estimator==1.13.0 (from -r requirements.txt (line 28))
+					<br>	Downloading https://files.pythonhosted.org/packages/bb/48/13f49fc3fa0fdf916aa1419013bb8f2ad09674c275b4046d5ee669a46873/tensorflow_estimator-1.13.0-py2.py3-none-any.whl (367kB)
+					<br>Collecting termcolor==1.1.0 (from -r requirements.txt (line 29))
+					<br>	Downloading https://files.pythonhosted.org/packages/8a/48/a76be51647d0eb9f10e2a4511bf3ffb8cc1e6b14e9e4fab46173aa79f981/termcolor-1.1.0.tar.gz
+					<br>Collecting Werkzeug==0.15.1 (from -r requirements.txt (line 30))
+					<br>	Downloading https://files.pythonhosted.org/packages/24/4d/2fc4e872fbaaf44cc3fd5a9cd42fda7e57c031f08e28c9f35689e8b43198/Werkzeug-0.15.1-py2.py3-none-any.whl (328kB)
+					<br>Requirement already satisfied: setuptools in ./venv/lib/python3.7/site-packages (from kiwisolver==1.0.1-&gt;-r requirements.txt (line 10)) (40.6.2)
+					<br>Collecting wheel&gt;=0.26; python_version &gt;= "3" (from tensorboard==1.13.1-&gt;-r requirements.txt (line 26))
+					<br>	Downloading https://files.pythonhosted.org/packages/96/ba/a4702cbb6a3a485239fbe9525443446203f00771af9ac000fa3ef2788201/wheel-0.33.1-py2.py3-none-any.whl
+					<br>Installing collected packages: six, absl-py, astor, cycler, gast, grpcio, numpy, h5py, Keras-Applications, scipy, PyYAML, Keras-Preprocessing, Keras, kiwisolver, Markdown, python-dateutil, pyparsing, matplotlib, pbr, mock, pytz, pandas, Pillow, protobuf, scikit-learn, wheel, Werkzeug, tensorboard, termcolor, tensorflow-estimator, tensorflow
+					<br>	Running setup.py install for absl-py: started
+					<br>		Running setup.py install for absl-py: finished with status 'done'
+					<br>	Running setup.py install for gast: started
+					<br>		Running setup.py install for gast: finished with status 'done'
+					<br>	Running setup.py install for PyYAML: started
+					<br>		Running setup.py install for PyYAML: finished with status 'done'
+					<br>	Running setup.py install for termcolor: started
+					<br>		Running setup.py install for termcolor: finished with status 'done'
+					<br>Successfully installed Keras-2.2.4 Keras-Applications-1.0.7 Keras-Preprocessing-1.0.9 Markdown-3.1 Pillow-5.4.1 PyYAML-5.1 Werkzeug-0.15.1 absl-py-0.7.1 astor-0.7.1 cycler-0.10.0 gast-0.2.2 grpcio-1.19.0 h5py-2.9.0 kiwisolver-1.0.1 matplotlib-3.0.3 mock-2.0.0 numpy-1.16.2 pandas-0.24.2 pbr-5.1.3 protobuf-3.7.0 pyparsing-2.3.1 python-dateutil-2.8.0 pytz-2018.9 scikit-learn-0.20.3 scipy-1.2.1 six-1.12.0 tensorboard-1.13.1 tensorflow-1.13.1 tensorflow-estimator-1.13.0 termcolor-1.1.0 wheel-0.33.1
+					<br>You are using pip version 18.1, however version 19.0.3 is available.
+					<br>You should consider upgrading via the 'pip install --upgrade pip' command.
+					<br>+ python zwee.py
+					<br>WARNING:tensorflow:From /var/lib/jenkins/workspace/HINT/venv/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+					<br>Instructions for updating:
+					<br>Colocations handled automatically by placer.
+					<br>WARNING:tensorflow:From /var/lib/jenkins/workspace/HINT/venv/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+					<br>Instructions for updating:
+					<br>Use tf.cast instead.
+					<br>2019-03-27 11:45:15.219779: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+					<br>2019-03-27 11:45:15.297022: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2400500000 Hz
+					<br>2019-03-27 11:45:15.297931: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x562565e658d0 executing computations on platform Host. Devices:
+					<br>2019-03-27 11:45:15.298029: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): &lt;undefined&gt;, &lt;undefined&gt;
+					<br>Found 117 images belonging to 2 classes.
+					<br>Found 117 images belonging to 2 classes.
+					<br>Found 39 images belonging to 1 classes.
+					<br>Epoch 1/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 1s - loss: 0.6988 - acc: 0.5000
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.7258 - acc: 0.4531
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.7388 - acc: 0.4588
+					<br>1/4 [======&gt;.......................] - ETA: 1s - loss: 0.6018 - acc: 0.9688
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.6022 - acc: 0.9688
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.6614 - acc: 0.6562
+					<br>4/4 [==============================] - 1s 265ms/step - loss: 0.6934 - acc: 0.5385
+					<br>
+					<br>4/4 [==============================] - 2s 581ms/step - loss: 0.7204 - acc: 0.4957 - val_loss: 0.6934 - val_acc: 0.5385
+					<br>Epoch 2/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.6622 - acc: 0.6190
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.6779 - acc: 0.5283
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.6707 - acc: 0.5647
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.6437 - acc: 0.8125
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.6408 - acc: 0.8594
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.6698 - acc: 0.6979
+					<br>4/4 [==============================] - 1s 193ms/step - loss: 0.6870 - acc: 0.6239
+					<br>
+					<br>4/4 [==============================] - 1s 341ms/step - loss: 0.6734 - acc: 0.5556 - val_loss: 0.6870 - val_acc: 0.6239
+					<br>Epoch 3/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.6711 - acc: 0.5938
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.6688 - acc: 0.6250
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.6653 - acc: 0.6354
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.6010 - acc: 0.8750
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.5958 - acc: 0.8906
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.6521 - acc: 0.6979
+					<br>4/4 [==============================] - 1s 194ms/step - loss: 0.6858 - acc: 0.6068
+					<br>
+					<br>4/4 [==============================] - 1s 336ms/step - loss: 0.6656 - acc: 0.6325 - val_loss: 0.6858 - val_acc: 0.6068
+					<br>Epoch 4/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.6136 - acc: 0.7812
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.5961 - acc: 0.7547
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.6406 - acc: 0.6706
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.4768 - acc: 0.9375
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.4700 - acc: 0.9531
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.6223 - acc: 0.6771
+					<br>4/4 [==============================] - 1s 190ms/step - loss: 0.7100 - acc: 0.5726
+					<br>
+					<br>4/4 [==============================] - 1s 340ms/step - loss: 0.6806 - acc: 0.6068 - val_loss: 0.7100 - val_acc: 0.5726
+					<br>Epoch 5/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.8335 - acc: 0.3333
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.7185 - acc: 0.6415
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.6931 - acc: 0.6471
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.9593 - acc: 0.1250
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.9228 - acc: 0.1406
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.7757 - acc: 0.4062
+					<br>4/4 [==============================] - 1s 188ms/step - loss: 0.7036 - acc: 0.5043
+					<br>
+					<br>4/4 [==============================] - 1s 343ms/step - loss: 0.6840 - acc: 0.6410 - val_loss: 0.7036 - val_acc: 0.5043
+					<br>Epoch 6/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.6829 - acc: 0.5312
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.6404 - acc: 0.6792
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.6281 - acc: 0.7059
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.6610 - acc: 0.7500
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.6333 - acc: 0.7656
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.6641 - acc: 0.6771
+					<br>4/4 [==============================] - 1s 184ms/step - loss: 0.6841 - acc: 0.6068
+					<br>
+					<br>4/4 [==============================] - 1s 336ms/step - loss: 0.6212 - acc: 0.7350 - val_loss: 0.6841 - val_acc: 0.6068
+					<br>Epoch 7/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.5681 - acc: 0.8438
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.5780 - acc: 0.8125
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.5882 - acc: 0.7708
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.7615 - acc: 0.6562
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.7078 - acc: 0.6406
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.6946 - acc: 0.6146
+					<br>4/4 [==============================] - 1s 180ms/step - loss: 0.6927 - acc: 0.6068
+					<br>
+					<br>4/4 [==============================] - 1s 331ms/step - loss: 0.5889 - acc: 0.7607 - val_loss: 0.6927 - val_acc: 0.6068
+					<br>Epoch 8/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.6003 - acc: 0.7143
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.5790 - acc: 0.7547
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.5474 - acc: 0.7647
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.9285 - acc: 0.5312
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.8342 - acc: 0.5312
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.7444 - acc: 0.5833
+					<br>4/4 [==============================] - 1s 191ms/step - loss: 0.7070 - acc: 0.6154
+					<br>
+					<br>4/4 [==============================] - 1s 347ms/step - loss: 0.5930 - acc: 0.6838 - val_loss: 0.7070 - val_acc: 0.6154
+					<br>Epoch 9/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.4842 - acc: 0.9048
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.5540 - acc: 0.7170
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.5218 - acc: 0.7412
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.5386 - acc: 0.8125
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.4799 - acc: 0.8438
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.6424 - acc: 0.6667
+					<br>4/4 [==============================] - 1s 187ms/step - loss: 0.7495 - acc: 0.5897
+					<br>
+					<br>4/4 [==============================] - 1s 323ms/step - loss: 0.5923 - acc: 0.6752 - val_loss: 0.7495 - val_acc: 0.5897
+					<br>Epoch 10/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.4865 - acc: 0.7812
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.5282 - acc: 0.7344
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.5522 - acc: 0.6875
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 1.1346 - acc: 0.4062
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 1.0224 - acc: 0.4375
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.8322 - acc: 0.5417
+					<br>4/4 [==============================] - 1s 185ms/step - loss: 0.7549 - acc: 0.5812
+					<br>
+					<br>4/4 [==============================] - 1s 323ms/step - loss: 0.5696 - acc: 0.6838 - val_loss: 0.7549 - val_acc: 0.5812
+					<br>Epoch 11/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.5642 - acc: 0.7619
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.5426 - acc: 0.7358
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.5258 - acc: 0.7647
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.7844 - acc: 0.6250
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.6800 - acc: 0.6719
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.6972 - acc: 0.6354
+					<br>4/4 [==============================] - 1s 193ms/step - loss: 0.7163 - acc: 0.5897
+					<br>
+					<br>4/4 [==============================] - 1s 337ms/step - loss: 0.5288 - acc: 0.7521 - val_loss: 0.7163 - val_acc: 0.5897
+					<br>Epoch 12/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.5668 - acc: 0.6667
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.6099 - acc: 0.6226
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.5505 - acc: 0.7294
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.8103 - acc: 0.6250
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.6657 - acc: 0.6875
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.7131 - acc: 0.6354
+					<br>4/4 [==============================] - 1s 187ms/step - loss: 0.7402 - acc: 0.5983
+					<br>
+					<br>4/4 [==============================] - 1s 328ms/step - loss: 0.5238 - acc: 0.7607 - val_loss: 0.7402 - val_acc: 0.5983
+					<br>Epoch 13/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.4934 - acc: 0.8125
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.4985 - acc: 0.7925
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.4864 - acc: 0.7882
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 1.1696 - acc: 0.5000
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.9502 - acc: 0.4844
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.8517 - acc: 0.5417
+					<br>4/4 [==============================] - 1s 183ms/step - loss: 0.7974 - acc: 0.5641
+					<br>
+					<br>4/4 [==============================] - 1s 330ms/step - loss: 0.4934 - acc: 0.7863 - val_loss: 0.7974 - val_acc: 0.5641
+					<br>Epoch 14/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.3881 - acc: 0.9375
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.4598 - acc: 0.8125
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.4753 - acc: 0.7812
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.9436 - acc: 0.6250
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.7187 - acc: 0.6562
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.7745 - acc: 0.6042
+					<br>4/4 [==============================] - 1s 187ms/step - loss: 0.8164 - acc: 0.5556
+					<br>
+					<br>4/4 [==============================] - 1s 344ms/step - loss: 0.4699 - acc: 0.7863 - val_loss: 0.8164 - val_acc: 0.5556
+					<br>Epoch 15/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.4901 - acc: 0.7188
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.4588 - acc: 0.7969
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.4917 - acc: 0.7647
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.9458 - acc: 0.6562
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.7167 - acc: 0.6719
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.7699 - acc: 0.6250
+					<br>4/4 [==============================] - 1s 200ms/step - loss: 0.8132 - acc: 0.5726
+					<br>
+					<br>4/4 [==============================] - 1s 322ms/step - loss: 0.4790 - acc: 0.7692 - val_loss: 0.8132 - val_acc: 0.5726
+					<br>Epoch 16/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.3551 - acc: 0.8750
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.4554 - acc: 0.7656
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.4468 - acc: 0.7396
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 1.1744 - acc: 0.5625
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.9098 - acc: 0.5938
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.8388 - acc: 0.5938
+					<br>4/4 [==============================] - 1s 186ms/step - loss: 0.8072 - acc: 0.5983
+					<br>
+					<br>4/4 [==============================] - 1s 331ms/step - loss: 0.4520 - acc: 0.7265 - val_loss: 0.8072 - val_acc: 0.5983
+					<br>Epoch 17/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.3918 - acc: 0.9062
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.4105 - acc: 0.8438
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.4276 - acc: 0.8229
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 1.5848 - acc: 0.4375
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 1.2620 - acc: 0.4531
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 1.0089 - acc: 0.5208
+					<br>4/4 [==============================] - 1s 173ms/step - loss: 0.8734 - acc: 0.5641
+					<br>
+					<br>4/4 [==============================] - 1s 308ms/step - loss: 0.3852 - acc: 0.8462 - val_loss: 0.8734 - val_acc: 0.5641
+					<br>Epoch 18/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.4976 - acc: 0.8095
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.4087 - acc: 0.8868
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.4227 - acc: 0.8471
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 1.0244 - acc: 0.6562
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.7453 - acc: 0.7031
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.7977 - acc: 0.6458
+					<br>4/4 [==============================] - 1s 179ms/step - loss: 0.8403 - acc: 0.5897
+					<br>
+					<br>4/4 [==============================] - 1s 317ms/step - loss: 0.3962 - acc: 0.8547 - val_loss: 0.8403 - val_acc: 0.5897
+					<br>Epoch 19/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.3235 - acc: 0.9048
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.3324 - acc: 0.8868
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.3329 - acc: 0.8824
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 1.6081 - acc: 0.4375
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 1.2231 - acc: 0.4844
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 1.0190 - acc: 0.5417
+					<br>4/4 [==============================] - 1s 181ms/step - loss: 0.9129 - acc: 0.5641
+					<br>
+					<br>4/4 [==============================] - 1s 336ms/step - loss: 0.3738 - acc: 0.8462 - val_loss: 0.9129 - val_acc: 0.5641
+					<br>Epoch 20/20
+					<br>
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 0.4287 - acc: 0.8571
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.3638 - acc: 0.9245
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.3743 - acc: 0.8824
+					<br>1/4 [======&gt;.......................] - ETA: 0s - loss: 1.2485 - acc: 0.5938
+					<br>2/4 [==============&gt;...............] - ETA: 0s - loss: 0.8921 - acc: 0.6562
+					<br>3/4 [=====================&gt;........] - ETA: 0s - loss: 0.8816 - acc: 0.6146
+					<br>4/4 [==============================] - 1s 186ms/step - loss: 0.8872 - acc: 0.5726
+					<br>
+					<br>4/4 [==============================] - 1s 332ms/step - loss: 0.3562 - acc: 0.8889 - val_loss: 0.8872 - val_acc: 0.5726
+					<br>Dog :0.59
+					<br>Finished: SUCCESS
+			</div>
+			</div>
     </section>
     <section class="mdl-layout__tab-panel" id="fixed-tab-2">
-      <div class="page-content"><!-- Your content goes here -->THIS IS TAB 2</div>
+			<div class="page-content"><!-- Your content goes here -->
+			<div style="display: flex; justify-content: center; margin-top: 40px;">
+				<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+						<thead>
+							<tr>
+								<th class="mdl-data-table__cell--non-numeric">Hyperparameter</th>
+								<th>Value</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for param, value in hyperparameters.items() %}
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">{{param}}</td>
+								<td>{{value}}</td>
+							</tr>
+							{% endfor %}
+							<!-- <tr>
+								<td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+								<td>50</td>
+							</tr>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+								<td>10</td>
+							</tr>-->
+						</tbody>
+					</table>
+				</div>
+			</div>
     </section>
     <section class="mdl-layout__tab-panel" id="fixed-tab-3">
-      <div class="page-content"><!-- Your content goes here -->THIS IS TAB 3
-        <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--4-col">
-			<canvas id="myChart0" width="400" height="400"></canvas>
+      <div class="page-content"><!-- Your content goes here -->
+ 			<div class="mdl-grid">
+{% for key, value in plotData.items() %}
+<!--<div class="mdl-cell mdl-cell--4-col"></div>-->
+<div class="mdl-cell mdl-cell--4-col">	
+	<canvas id="canvas_{{key}}" height="200" width="200" style="width: 400px; height: 240px;"></canvas>
 			<script>
-			var ctx = document.getElementById('myChart0');
-			var myChart0 = new Chart(ctx, {
-				type: 'line',
-				data: {
-					labels: [{% for item in labels %}
-						      "{{item}}",
+				var config = {
+					type: 'line',
+					data: {
+						labels: [{% for item in value %}
+						      "{{loop.index}}",
 						  {% endfor %}],
-					datasets: [{
-						label: '# of Votes',
-						data: [{% for item in values[0] %}
-						          {{item}},
-						        {% endfor %}],
-						borderColor: [
-						    'rgba(200, 99, 132, 1)',
-						    'rgba(54, 162, 235, 1)',
-						    'rgba(200, 206, 106, 1)',
-						    'rgba(75, 192, 192, 1)',
-						    'rgba(153, 102, 255, 1)',
-						    'rgba(255, 159, 64, 1)'
-						],
-						borderWidth: 1
-					}]
-				},
-				options: {
-					scales: {
-						yAxes: [{
-						    ticks: {
-						        beginAtZero: true
-						    }
+						datasets: [{
+							label: '{{key}}',
+							data:  [{% for item in value %}
+						      {{item}},
+						  {% endfor %}],
+							borderColor: "rgb(132, 99, 255)",
+							backgroundColor: 'rgba(0, 0, 0, 0)',
+							fill: false,
+							cubicInterpolationMode: 'monotone'
 						}]
+					},
+					options: {
+						responsive: true,
+						title: {
+							display: true,
+							text: '{{key}}'
+						},
+						tooltips: {
+							mode: 'index'
+						},
+						scales: {
+							xAxes: [{
+								display: true,
+								scaleLabel: {
+									display: true
+								}
+							}],
+							yAxes: [{
+								display: true,
+								scaleLabel: {
+									display: true,
+									labelString: 'Value'
+								},
+							}],
+							xAxes: [{
+								display: true,
+								scaleLabel: {
+									display: true,
+									labelString: 'Epoch'
+								},
+							}]
+						}
 					}
-				}
-			});
+				};
+		
+				var ctx = document.getElementById('canvas_{{key}}').getContext('2d');
+				window.myLine = new Chart(ctx, config);
 			</script>
 
-			<canvas id="chart0" width="600" height="400"></canvas>
-			 
-			<script>
-			   var barData = {
-			   labels : [{% for item in labels %}
-						      "{{item}}",
-						  {% endfor %}],
-			   datasets : [
-				  {
-						fillColor: "rgba(75,192,192,1)",
-						strokeColor: "rgba(151,187,205,0)",
-						pointColor: "rgba(151,187,205,0)",
-						pointStrokeColor: "#fff",
-						pointHighlightFill: "#fff",
-						pointHighlightStroke: "rgba(151,187,205,0)",
-						bezierCurve : false,
-						data : [{% for item in values[0] %}
-						          {{item}},
-						        {% endfor %}]
-				  }]
-			   };
-				Chart.defaults.global.animationSteps = 50;
-				Chart.defaults.global.tooltipYPadding = 16;
-				Chart.defaults.global.tooltipCornerRadius = 0;
-				Chart.defaults.global.tooltipTitleFontStyle = "normal";
-				Chart.defaults.global.tooltipFillColor = false;
-				Chart.defaults.global.animationEasing = "easeOutBounce";
-				Chart.defaults.global.responsive = false;
-				Chart.defaults.global.scaleLineColor = "black";
-				Chart.defaults.global.scaleFontSize = 16;
-			   // get bar chart canvas<br />
-			   var mychart0 = document.getElementById("chart0").getContext("2d");
-				  steps = 10;
-			   max = 10;
-			   // draw bar chart<br />
-			   var LineChartDemo = new Chart(mychart0).Line(barData, {
-					scaleOverride: true,
-					scaleSteps: steps,
-					scaleStepWidth: Math.ceil(max / steps),
-					scaleStartValue: 0,
-					scaleShowVerticalLines: true,
-					scaleShowGridLines : true,
-					barShowStroke : true,
-					scaleShowLabels: true,
-					bezierCurve: false,
-			 });
-			</script>
-		  </div>
-          <div class="mdl-cell mdl-cell--4-col">4
-<canvas id="myChart1" width="400" height="400"></canvas>
-			<script>
-			var ctx = document.getElementById('myChart1');
-			var myChart1 = new Chart(ctx, {
-				type: 'line',
-				data: {
-					labels: [{% for item in labels %}
-						      "{{item}}",
-						  {% endfor %}],
-					datasets: [{
-						label: '# of Votes',
-						data: [{% for item in values[1] %}
-						          {{item}},
-						        {% endfor %}],
-						borderColor: [
-						    'rgba(200, 99, 132, 1)',
-						    'rgba(54, 162, 235, 1)',
-						    'rgba(200, 206, 106, 1)',
-						    'rgba(75, 192, 192, 1)',
-						    'rgba(153, 102, 255, 1)',
-						    'rgba(255, 159, 64, 1)'
-						],
-						borderWidth: 1
-					}]
-				},
-				options: {
-					scales: {
-						yAxes: [{
-						    ticks: {
-						        beginAtZero: true
-						    }
-						}]
-					}
-				}
-			});
-			</script>
+			</div>
+	<!--	<div class="mdl-cell mdl-cell--4-col"></div>-->
+{% endfor %}
 
-			<canvas id="chart1" width="600" height="400"></canvas>
-			 
-			<script>
-			   var barData = {
-			   labels : [{% for item in labels %}
-						      "{{item}}",
-						  {% endfor %}],
-			   datasets : [
-				  {
-						fillColor: "rgba(75,192,192,1)",
-						strokeColor: "rgba(151,187,205,0)",
-						pointColor: "rgba(151,187,205,0)",
-						pointStrokeColor: "#fff",
-						pointHighlightFill: "#fff",
-						pointHighlightStroke: "rgba(151,187,205,0)",
-						bezierCurve : false,
-						data : [{% for item in values[1] %}
-						          {{item}},
-						        {% endfor %}]
-				  }]
-			   };
-				Chart.defaults.global.animationSteps = 50;
-				Chart.defaults.global.tooltipYPadding = 16;
-				Chart.defaults.global.tooltipCornerRadius = 0;
-				Chart.defaults.global.tooltipTitleFontStyle = "normal";
-				Chart.defaults.global.tooltipFillColor = false;
-				Chart.defaults.global.animationEasing = "easeOutBounce";
-				Chart.defaults.global.responsive = false;
-				Chart.defaults.global.scaleLineColor = "black";
-				Chart.defaults.global.scaleFontSize = 16;
-			   // get bar chart canvas<br />
-			   var mychart1 = document.getElementById("chart1").getContext("2d");
-				  steps = 10;
-			   max = 10;
-			   // draw bar chart<br />
-			   var LineChartDemo = new Chart(mychart1).Line(barData, {
-					scaleOverride: true,
-					scaleSteps: steps,
-					scaleStepWidth: Math.ceil(max / steps),
-					scaleStartValue: 0,
-					scaleShowVerticalLines: true,
-					scaleShowGridLines : true,
-					barShowStroke : true,
-					scaleShowLabels: true,
-					bezierCurve: false,
-			 });
-			</script>
-		  </div>
-          <div class="mdl-cell mdl-cell--4-col">4
-<canvas id="myChart2" width="400" height="400"></canvas>
-			<script>
-			var ctx = document.getElementById('myChart2');
-			var myChart2 = new Chart(ctx, {
-				type: 'line',
-				data: {
-					labels: [{% for item in labels %}
-						      "{{item}}",
-						  {% endfor %}],
-					datasets: [{
-						label: '# of Votes',
-						data: [{% for item in values[2] %}
-						          {{item}},
-						        {% endfor %}],
-						borderColor: [
-						    'rgba(200, 99, 132, 1)',
-						    'rgba(54, 162, 235, 1)',
-						    'rgba(200, 206, 106, 1)',
-						    'rgba(75, 192, 192, 1)',
-						    'rgba(153, 102, 255, 1)',
-						    'rgba(255, 159, 64, 1)'
-						],
-						borderWidth: 1
-					}]
-				},
-				options: {
-					scales: {
-						yAxes: [{
-						    ticks: {
-						        beginAtZero: true
-						    }
-						}]
-					}
-				}
-			});
-			</script>
-
-			<canvas id="chart2" width="600" height="400"></canvas>
-			 
-			<script>
-			   var barData = {
-			   labels : [{% for item in labels %}
-						      "{{item}}",
-						  {% endfor %}],
-			   datasets : [
-				  {
-						fillColor: "rgba(75,192,192,1)",
-						strokeColor: "rgba(151,187,205,0)",
-						pointColor: "rgba(151,187,205,0)",
-						pointStrokeColor: "#fff",
-						pointHighlightFill: "#fff",
-						pointHighlightStroke: "rgba(151,187,205,0)",
-						bezierCurve : false,
-						data : [{% for item in values[2] %}
-						          {{item}},
-						        {% endfor %}]
-				  }]
-			   };
-				Chart.defaults.global.animationSteps = 50;
-				Chart.defaults.global.tooltipYPadding = 16;
-				Chart.defaults.global.tooltipCornerRadius = 0;
-				Chart.defaults.global.tooltipTitleFontStyle = "normal";
-				Chart.defaults.global.tooltipFillColor = false;
-				Chart.defaults.global.animationEasing = "easeOutBounce";
-				Chart.defaults.global.responsive = false;
-				Chart.defaults.global.scaleLineColor = "black";
-				Chart.defaults.global.scaleFontSize = 16;
-			   // get bar chart canvas<br />
-			   var mychart2 = document.getElementById("chart2").getContext("2d");
-				  steps = 10;
-			   max = 10;
-			   // draw bar chart<br />
-			   var LineChartDemo = new Chart(mychart2).Line(barData, {
-					scaleOverride: true,
-					scaleSteps: steps,
-					scaleStepWidth: Math.ceil(max / steps),
-					scaleStartValue: 0,
-					scaleShowVerticalLines: true,
-					scaleShowGridLines : true,
-					barShowStroke : true,
-					scaleShowLabels: true,
-					bezierCurve: false,
-			 });
-			</script>
-		  </div>
-        </div>
-        <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--4-col">4
-<canvas id="myChart3" width="400" height="400"></canvas>
-			<script>
-			var ctx = document.getElementById('myChart3');
-			var myChart = new Chart(ctx, {
-				type: 'line',
-				data: {
-					labels: [{% for item in labels %}
-						      "{{item}}",
-						  {% endfor %}],
-					datasets: [{
-						label: '# of Votes',
-						data: [{% for item in values[0] %}
-						          {{item}},
-						        {% endfor %}],
-						borderColor: [
-						    'rgba(200, 99, 132, 1)',
-						    'rgba(54, 162, 235, 1)',
-						    'rgba(200, 206, 106, 1)',
-						    'rgba(75, 192, 192, 1)',
-						    'rgba(153, 102, 255, 1)',
-						    'rgba(255, 159, 64, 1)'
-						],
-						borderWidth: 1
-					}]
-				},
-				options: {
-					scales: {
-						yAxes: [{
-						    ticks: {
-						        beginAtZero: true
-						    }
-						}]
-					}
-				}
-			});
-			</script>
-
-			<canvas id="chart3" width="600" height="400"></canvas>
-			 
-			<script>
-			   var barData = {
-			   labels : [{% for item in labels %}
-						      "{{item}}",
-						  {% endfor %}],
-			   datasets : [
-				  {
-						fillColor: "rgba(75,192,192,1)",
-						strokeColor: "rgba(151,187,205,0)",
-						pointColor: "rgba(151,187,205,0)",
-						pointStrokeColor: "#fff",
-						pointHighlightFill: "#fff",
-						pointHighlightStroke: "rgba(151,187,205,0)",
-						bezierCurve : false,
-						data : [{% for item in values[0] %}
-						          {{item}},
-						        {% endfor %}]
-				  }]
-			   };
-				Chart.defaults.global.animationSteps = 50;
-				Chart.defaults.global.tooltipYPadding = 16;
-				Chart.defaults.global.tooltipCornerRadius = 0;
-				Chart.defaults.global.tooltipTitleFontStyle = "normal";
-				Chart.defaults.global.tooltipFillColor = false;
-				Chart.defaults.global.animationEasing = "easeOutBounce";
-				Chart.defaults.global.responsive = false;
-				Chart.defaults.global.scaleLineColor = "black";
-				Chart.defaults.global.scaleFontSize = 16;
-			   // get bar chart canvas<br />
-			   var mychart = document.getElementById("chart3").getContext("2d");
-				  steps = 10;
-			   max = 10;
-			   // draw bar chart<br />
-			   var LineChartDemo = new Chart(mychart).Line(barData, {
-					scaleOverride: true,
-					scaleSteps: steps,
-					scaleStepWidth: Math.ceil(max / steps),
-					scaleStartValue: 0,
-					scaleShowVerticalLines: true,
-					scaleShowGridLines : true,
-					barShowStroke : true,
-					scaleShowLabels: true,
-					bezierCurve: false,
-			 });
-			</script>
-		  </div>
-          <div class="mdl-cell mdl-cell--4-col">4</div>
-          <div class="mdl-cell mdl-cell--4-col">4</div>
         </div> 
       </div>
-    </section>
+		</section>
+		<section class="mdl-layout__tab-panel" id="fixed-tab-4">
+				<div class="page-content">
+						<div style="margin: 70px; padding: 10px; border: 1px solid black; color:rgb(13, 12, 15); background-color: rgb(243, 243, 243); font-family: 'Courier New', Courier, monospace">
+								<br>absl-py==0.7.1
+								<br>astor==0.7.1
+								<br>cycler==0.10.0
+								<br>gast==0.2.2`
+								<br>grpcio==1.19.0
+								<br>h5py==2.9.0
+								<br>Keras==2.2.4
+								<br>Keras-Applications==1.0.7
+								<br>keras-metrics==1.0.0
+								<br>Keras-Preprocessing==1.0.9
+								<br>kiwisolver==1.0.1
+								<br>Markdown==3.1
+								<br>matplotlib==3.0.3
+								<br>mock==2.0.0
+								<br>numpy==1.16.2
+								<br>pandas==0.24.2
+								<br>pbr==5.1.3
+								<br>Pillow==5.4.1
+								<br>protobuf==3.7.0
+								<br>pymongo==3.7.2
+								<br>pyparsing==2.3.1
+								<br>python-dateutil==2.8.0
+								<br>pytz==2018.9
+								<br>PyYAML==5.1
+								<br>scikit-learn==0.20.3
+								<br>scipy==1.2.1
+								<br>six==1.12.0
+								<br>tensorboard==1.13.1
+								<br>tensorflow==1.13.1
+								<br>tensorflow-estimator==1.13.0
+								<br>termcolor==1.1.0
+								<br>Werkzeug==0.15.1
+						</div>
+				</div>
+		</section>
+		<section class="mdl-layout__tab-panel" id="fixed-tab-5">
+				<div class="page-content">{% if dataset_commit %}
+					<div style="display:flex; justify-content: center;">	
+						<br>
+						<span class="mdl-chip">
+								<span class="mdl-chip__text">Git Commit Hash :{{ dataset_commit }}</span>
+						</span>
+					
+					{% endif %}</div></div>
+		</section>
+		<section class="mdl-layout__tab-panel" id="fixed-tab-6">
+				<div style="display:flex; justify-content: center;">	
+				<div class="page-content">{% if code_commit %}
+						<br>
+						<span class="mdl-chip">
+
+								<span class="mdl-chip__text">Git Commit Hash :{{ code_commit }}</span>
+						</span>
+					{% endif %}</div>
+				</div>
+		</section>
   </main>
 </div>
 
